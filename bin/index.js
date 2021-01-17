@@ -78,7 +78,7 @@ program
   .description('view all templates')
   .action(() => {
     for (const key in templates) {
-      console.log(chalk.red('  ★ '), `${key}  ${templates[key].description}`)
+      console.log(chalk.red('  ★ '), `${key}  ${templates[key].description}`);
     }
   });
 
