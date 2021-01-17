@@ -1,4 +1,4 @@
-# @hbs/custom-cli
+# @hbs/cli
 
 ### 介绍
 > This is Hongbusi's custom cli.
