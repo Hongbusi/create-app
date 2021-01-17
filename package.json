@@ -1,5 +1,5 @@
 {
-  "name": "@hbs/custom-cli",
+  "name": "@hbs/cli",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
