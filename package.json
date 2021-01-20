@@ -23,9 +23,11 @@
     "chalk": "^4.1.0",
     "commander": "^6.2.1",
     "download-git-repo": "^3.0.2",
+    "fs-extra": "^9.1.0",
     "handlebars": "^4.7.6",
     "inquirer": "^7.3.3",
     "log-symbols": "^4.0.0",
-    "ora": "^5.2.0"
+    "ora": "^5.2.0",
+    "update-notifier": "^5.0.1"
   }
 }
