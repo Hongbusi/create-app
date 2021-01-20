@@ -6,6 +6,7 @@ const logList = require('../lib/logList');
 const upgrade = require('../lib/upgrade');
 const addTemplate = require('../lib/addTemplate');
 const removeTemplate = require('../lib/removeTemplate');
+const init = require('../lib/init');
 
 // version
 program.version(require('../package.json').version, '-v, --version');
@@ -45,9 +46,9 @@ program
 // init
 program
   .command('init <template_name> <project_name>')
-  .description('init a template')
-  .action(() => {
-    
+  .description('create a project template')
+  .action((templateName, projectName) => {
+    init(templateName, projectName);
   });
   
 program.parse(process.argv);
