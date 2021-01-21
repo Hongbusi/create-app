@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const fse = require('fs-extra');
+const path = require('path');
 const program = require('commander');
 
 const logList = require('../lib/logList');
@@ -8,8 +10,12 @@ const addTemplate = require('../lib/addTemplate');
 const removeTemplate = require('../lib/removeTemplate');
 const init = require('../lib/init');
 
+const packagePath = path.resolve(__dirname, '../package.json');
+
+const packageObj = fse.readJsonSync(packagePath);
+
 // version
-program.version(require('../package.json').version, '-v, --version');
+program.version(packageObj.version, '-v, --version');
 
 // list
 program
@@ -22,7 +28,7 @@ program
 // upgrade
 program
 	.command('upgrade')
-	.description(`upgrade the ${require('../package.json').name} version`)
+	.description(`upgrade the ${packageObj.name} version`)
 	.action(() => {
 		upgrade();
 	});
