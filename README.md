@@ -39,6 +39,11 @@ hbs add <template_name> <template_url>
 hbs remove <template_name>
 ```
 
+- resetting the default template
+```
+hbs reset
+```
+
 - create a project with the template
 ```
 hbs init <template_name> <project_name>
