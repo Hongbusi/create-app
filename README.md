@@ -1,31 +1,49 @@
 # @hbs/cli
 
-### 介绍
-> This is Hongbusi's custom cli.
+> @hbs/cli is a custom cli tool.
 
-### 常用命名
-
-- 查看版本
+### Install
 ```
-hbs -V | --version
+npm install @hbs/cli -global
 ```
 
-- 查看所有模板
+### Command
+
+- display help for command
+```
+hbs -h | --help
+```
+
+- output the version number
+```
+hbs -v | --version
+```
+
+- view all template
 ```
 hbs list
 ```
 
-- 使用模板创建项目
+- upgrade the @hbs/cli version
 ```
-hbs init <templateName> <projectName>
+hbs upgrade
 ```
 
-### 已有模板
+- add a template
+```
+hbs add <template_name> <template_url>
+```
+
+- remove a template
+```
+hbs remove <template_name>
+```
+
+- create a project with the template
+```
+hbs init <template_name> <project_name>
+```
+
+### Default templates
 - vue-template
-
-### 解决方案
-- 如一直卡在 Downloading template... ?
-```
-// 切换 npm 源
-npm config set registry https://registry.npm.taobao.org
-```
+  

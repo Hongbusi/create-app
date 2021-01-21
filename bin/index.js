@@ -1,83 +1,59 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
+const fse = require('fs-extra');
 const program = require('commander');
-const inquirer = require('inquirer');
-const download = require('download-git-repo');
-const handlebars = require('handlebars');
-const ora = require('ora');
-const chalk = require('chalk');
-const logSymbols = require('log-symbols');
-const { exec } = require('child_process');
 
-const templates = require('./templates');
+const logList = require('../lib/logList');
+const upgrade = require('../lib/upgrade');
+const addTemplate = require('../lib/addTemplate');
+const removeTemplate = require('../lib/removeTemplate');
+const init = require('../lib/init');
 
-program.version('1.0.0');
+const { packagePath } = require('../lib/filePath');
 
-program
-  .command('init <template> <project>')
-  .description('init project template')
-  .action((templateName, projectName) => {
-    if (fs.existsSync(projectName)) {
-      console.log(logSymbols.error, chalk.red('Project already exists'));
-      return;
-    }
+const packageObj = fse.readJsonSync(packagePath);
 
-    inquirer.prompt([
-      {
-        type: 'input',
-        name: 'name',
-        message: `Project name`,
-        default: projectName
-      },
-      {
-        type: 'input',
-        name: 'description',
-        message: 'Project description '
-      },
-      {
-        type: 'input',
-        name: 'author',
-        message: 'Author '
-      },
-    ]).then((answers) => {
-      const spinner = ora('Downloading template...').start();
-      const { downloadUrl, url } = templates[templateName];
-      download(downloadUrl, projectName, { clone: true }, (err) => {
-        if (err) {
-          spinner.fail();
-          console.log(logSymbols.error, chalk.red(err));
-          return;
-        }
+// version
+program.version(packageObj.version, '-v, --version');
 
-        const packagePath = `${projectName}/package.json`;
-        const packageContent = fs.readFileSync(packagePath, 'utf-8');
-        const packageResult = handlebars.compile(packageContent)(answers);
-        fs.writeFileSync(packagePath, packageResult);
-
-        exec(`cd ${projectName} && npm install`, (error) => {
-          if (error) {
-            console.log(logSymbols.error, chalk.red(error));
-            return;
-          }
-          spinner.succeed();
-          console.log(logSymbols.success, chalk.green('Project initialization finished!\n'));
-          console.log('To get started:\n');
-          console.log(chalk.yellow(`   cd ${projectName}`));
-          console.log(chalk.yellow('   npm run dev\n'));
-          console.log(`Documentation can be fount at ${url}\n\n`);
-        });
-      });
-    });
-  });
-
+// list
 program
   .command('list')
-  .description('view all templates')
+  .description('view all template')
   .action(() => {
-    for (const key in templates) {
-      console.log(chalk.red('  ★ '), `${key}  ${templates[key].description}`);
-    }
+    logList();
   });
 
+// upgrade
+program
+	.command('upgrade')
+	.description(`upgrade the ${packageObj.name} version`)
+	.action(() => {
+		upgrade();
+	});
+
+// add
+program
+	.command('add <template_name> <template_url>')
+	.description('add a template')
+	.action((templateName, templateUrl) => {
+		addTemplate(templateName, templateUrl);
+  });
+
+// remove
+program
+  .command('remove <template_name>')
+  .description('remove a template')
+  .action((templateName) => {
+    removeTemplate(templateName);
+  });
+
+// init
+program
+  .command('init <template_name> <project_name>')
+  .description('create a project with the template')
+  .action((templateName, projectName) => {
+    init(templateName, projectName);
+  });
+  
 program.parse(process.argv);
