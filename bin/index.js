@@ -26,18 +26,18 @@ program
 
 // upgrade
 program
-	.command('upgrade')
-	.description(`upgrade the ${packageObj.name} version`)
-	.action(() => {
-		upgrade();
-	});
+  .command('upgrade')
+  .description(`upgrade the ${packageObj.name} version`)
+  .action(() => {
+    upgrade();
+  });
 
 // add
 program
-	.command('add <template_name> <template_url>')
-	.description('add a template')
-	.action((templateName, templateUrl) => {
-		addTemplate(templateName, templateUrl);
+  .command('add <template_name> <template_url>')
+  .description('add a template')
+  .action((templateName, templateUrl) => {
+    addTemplate(templateName, templateUrl);
   });
 
 // remove
