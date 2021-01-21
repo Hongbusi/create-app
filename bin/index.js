@@ -22,7 +22,7 @@ program
 // upgrade
 program
 	.command('upgrade')
-	.description(`check the ${require('../package.json').name} version`)
+	.description(`upgrade the ${require('../package.json').name} version`)
 	.action(() => {
 		upgrade();
 	});
@@ -46,7 +46,7 @@ program
 // init
 program
   .command('init <template_name> <project_name>')
-  .description('create a project template')
+  .description('create a project with the template')
   .action((templateName, projectName) => {
     init(templateName, projectName);
   });
