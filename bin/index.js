@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const fse = require('fs-extra');
-const path = require('path');
 const program = require('commander');
 
 const logList = require('../lib/logList');
@@ -10,7 +9,7 @@ const addTemplate = require('../lib/addTemplate');
 const removeTemplate = require('../lib/removeTemplate');
 const init = require('../lib/init');
 
-const packagePath = path.resolve(__dirname, '../package.json');
+const { packagePath } = require('../lib/filePath');
 
 const packageObj = fse.readJsonSync(packagePath);
 
