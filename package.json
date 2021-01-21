@@ -14,6 +14,7 @@
     "url": "git+https://github.com/Hongbusi/custom-cli.git"
   },
   "author": "Hongbusi",
+  "keywords": ["hbs", "cli"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hongbusi/custom-cli/issues"
