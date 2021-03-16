@@ -1,6 +1,6 @@
 {
   "name": "@hbs/cli",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "This is Hongbusi's custom cli.",
   "main": "index.js",
   "scripts": {
