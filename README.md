@@ -46,7 +46,7 @@ hbs reset
 
 - create a project with the template
 ```
-hbs init <template_name> <project_name>
+hbs init <project_name>
 ```
 
 ### Default templates

@@ -59,10 +59,10 @@ program
 
 // init
 program
-  .command('init <template_name> <project_name>')
+  .command('init <project_name>')
   .description('create a project with the template')
-  .action((templateName, projectName) => {
-    init(templateName, projectName);
+  .action((projectName) => {
+    init(projectName);
   });
-  
+
 program.parse(process.argv);
