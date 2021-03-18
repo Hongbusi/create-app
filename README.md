@@ -1,54 +1,64 @@
-# @hbs/cli
+# hbs-client
 
-> @hbs/cli is a custom cli tool.
+> hbs-client is a custom cli tool.
 
-### Install
+## Installation
+
 ```
-npm install @hbs/cli -global
-```
-
-### Command
-
-- display help for command
-```
-hbs -h | --help
+npm install -global hbs-client
 ```
 
-- output the version number
-```
-hbs -v | --version
-```
+## Command
 
-- view all template
-```
-hbs list
-```
+create a project with the template
 
-- upgrade the @hbs/cli version
-```
-hbs upgrade
-```
-
-- add a template
-```
-hbs add <template_name> <template_url>
-```
-
-- remove a template
-```
-hbs remove <template_name>
-```
-
-- resetting the default template
-```
-hbs reset
-```
-
-- create a project with the template
 ```
 hbs init <project_name>
 ```
 
-### Default templates
-- vue-template
+display help for command
+
+```
+hbs -h | --help
+```
+
+output the version number
+
+```
+hbs -v | --version
+```
+
+view all template
+
+```
+hbs list
+```
+
+upgrade the hbs-client version
+
+```
+hbs upgrade
+```
+
+add a template
+
+```
+hbs add <template_name> <template_url>
+```
+
+remove a template
+
+```
+hbs remove <template_name>
+```
+
+resetting the default template
+
+```
+hbs reset
+```
+
+## Default templates
+
+[vue-template](https://github.com/Hongbusi/vue-template)
   
