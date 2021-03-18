@@ -1,6 +1,6 @@
 # hbs-client
 
-> hbs-client is a custom cli tool.
+hbs-client is a custom cli tool.
 
 ## Installation
 
