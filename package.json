@@ -1,7 +1,7 @@
 {
-  "name": "hbs-client",
-  "version": "1.0.2",
-  "description": "This is Hongbusi's custom cli.",
+  "name": "hbs-create",
+  "version": "1.0.1",
+  "description": "This is a tool to initialize a project.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hongbusi/hbs-client.git"
+    "url": "git+https://github.com/Hongbusi/hbs-create.git"
   },
   "author": "Hongbusi",
   "keywords": [
@@ -20,9 +20,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hongbusi/hbs-client/issues"
+    "url": "https://github.com/Hongbusi/hbs-create/issues"
   },
-  "homepage": "https://github.com/Hongbusi/hbs-client#readme",
+  "homepage": "https://github.com/Hongbusi/hbs-create#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.1",

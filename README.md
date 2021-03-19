@@ -1,11 +1,11 @@
-# hbs-client
+# hbs-create
 
-hbs-client is a custom cli tool.
+This is a tool to initialize a project.
 
 ## Installation
 
 ```
-npm install -global hbs-client
+npm install -global hbs-create
 ```
 
 ## Command
@@ -34,7 +34,7 @@ view all template
 hbs list
 ```
 
-upgrade the hbs-client version
+upgrade the hbs-create version
 
 ```
 hbs upgrade
