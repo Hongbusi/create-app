@@ -1,6 +1,6 @@
 ## v1.0.2 (2021.03.19)
 
-- logSymbols is not defined
+- git clone failed: logSymbols is not defined
 
 ## v1.0.1 (2021.03.19)
 
