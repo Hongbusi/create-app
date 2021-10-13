@@ -1,5 +1,5 @@
 {
-  "name": "hbs-create",
+  "name": "@hbs/create-app",
   "version": "1.0.2",
   "description": "This is a tool to initialize a project.",
   "main": "index.js",
