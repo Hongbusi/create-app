@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hongbusi/hbs-create.git"
+    "url": "git+https://github.com/Hongbusi/create-app.git"
   },
   "author": "Hongbusi",
   "keywords": [
@@ -20,9 +20,9 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hongbusi/hbs-create/issues"
+    "url": "https://github.com/Hongbusicreate-app/issues"
   },
-  "homepage": "https://github.com/Hongbusi/hbs-create#readme",
+  "homepage": "https://github.com/Hongbusi/create-app#readme",
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^6.2.1",
