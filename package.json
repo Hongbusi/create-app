@@ -4,7 +4,8 @@
   "description": "This is a tool to initialize a project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "bin": {
     "hbs": "./bin/index.js"
@@ -33,5 +34,10 @@
     "log-symbols": "^4.0.0",
     "ora": "^5.2.0",
     "update-notifier": "^5.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "husky": "^7.0.4"
   }
 }
