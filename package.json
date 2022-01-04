@@ -1,14 +1,13 @@
 {
   "name": "@hongbusi/create-app",
-  "version": "1.0.2",
+  "version": "0.1",
   "description": "Quickly create projects through templates.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },
   "bin": {
-    "hbs": "./bin/index.js"
+    "create-app": "index.js"
   },
   "repository": {
     "type": "git",
