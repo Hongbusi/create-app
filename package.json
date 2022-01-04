@@ -1,7 +1,7 @@
 {
   "name": "@hbs/create-app",
   "version": "1.0.2",
-  "description": "This is a tool to initialize a project.",
+  "description": "Quickly create projects through templates.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,10 +15,6 @@
     "url": "git+https://github.com/Hongbusi/create-app.git"
   },
   "author": "Hongbusi",
-  "keywords": [
-    "hbs",
-    "cli"
-  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hongbusicreate-app/issues"
