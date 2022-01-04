@@ -1,6 +1,6 @@
 {
   "name": "@hongbusi/create-app",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "Quickly create projects through templates.",
   "main": "index.js",
   "scripts": {
