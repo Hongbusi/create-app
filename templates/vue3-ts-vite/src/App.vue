@@ -1,10 +1,5 @@
 
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld />
+  <router-view />
 </template>
-
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
