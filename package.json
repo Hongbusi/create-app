@@ -1,5 +1,5 @@
 {
-  "name": "@hbs/create-app",
+  "name": "@hongbusi/create-app",
   "version": "1.0.2",
   "description": "Quickly create projects through templates.",
   "main": "index.js",
